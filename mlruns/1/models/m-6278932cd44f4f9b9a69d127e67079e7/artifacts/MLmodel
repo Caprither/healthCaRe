@@ -1,0 +1,22 @@
+artifact_path: file:C:/Users/moham/Healthcare_Mlops/mlruns/1/models/m-6278932cd44f4f9b9a69d127e67079e7/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.13.3
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.3.0
+mlflow_version: 3.14.0
+model_id: m-6278932cd44f4f9b9a69d127e67079e7
+model_size_bytes: 222202
+model_uuid: m-6278932cd44f4f9b9a69d127e67079e7
+prompts: null
+run_id: fbc918ce49d54910adca6bc8578cd19e
+utc_time_created: '2026-06-18 15:40:19.977369'

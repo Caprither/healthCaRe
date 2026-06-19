@@ -1,0 +1,27 @@
+artifact_path: file:C:/Users/moham/healthcare_mlops/mlruns/2/models/m-8f6afbf2edd74aa88fdb0e402a569976/artifacts
+flavors:
+  lightgbm:
+    code: null
+    data: model.skops
+    lgb_version: 4.6.0
+    model_class: lightgbm.sklearn.LGBMClassifier
+    serialization_format: skops
+    skops_trusted_types:
+    - lightgbm.sklearn.LGBMRegressor
+    - lightgbm.sklearn.LGBMClassifier
+    - collections.OrderedDict
+    - lightgbm.basic.Booster
+  python_function:
+    data: model.skops
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.13.3
+mlflow_version: 3.14.0
+model_id: m-8f6afbf2edd74aa88fdb0e402a569976
+model_size_bytes: 41803
+model_uuid: m-8f6afbf2edd74aa88fdb0e402a569976
+prompts: null
+run_id: 864bab48922d46edac878760dc15e61b
+utc_time_created: '2026-06-19 14:32:14.186919'

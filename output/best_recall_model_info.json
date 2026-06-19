@@ -1,0 +1,8 @@
+{
+    "selected_architecture": "XGBoost",
+    "metrics_at_optimal_recall": {
+        "accuracy": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666
+    }
+}
