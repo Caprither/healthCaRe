@@ -1,10 +1,3 @@
-"""
-src/data_preprocessing.py
-
-Dynamically sorts numerical and categorical columns for scikit-learn preprocessing.
-Saves the artifact for FastAPI serving.
-"""
-
 import argparse
 import logging
 import os
@@ -19,20 +12,12 @@ from sklearn.impute import SimpleImputer
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
 
-# ==============================================================================
-# THE BLACKLIST: Strict separation of features to eliminate all data leakage
-# ==============================================================================
 COLUMNS_TO_IGNORE = [
-    # Metadata & Identifiers
     "DESYNPUF_ID", 
     "data_year",
-    
-    # Target Variables
     "total_cost",               
     "target_is_high_cost",      
     "target_readmission_risk",  
-
-    # --- REMOVE ALL INPATIENT UTILIZATION (THE LEAKAGE SOURCE) ---
     "INPATIENT_CLAIM_COUNT",
     "INPATIENT_CLM_PMT_AMT_SUM",
     "INPATIENT_NCH_BENE_IP_DDCTBL_AMT_SUM",
@@ -41,7 +26,6 @@ COLUMNS_TO_IGNORE = [
 ]
 
 def build_preprocessor(num_cols: list, cat_cols: list) -> ColumnTransformer:
-    """Builds the dynamic scikit-learn column transformer."""
     numeric_transformer = Pipeline(steps=[
         ('imputer', SimpleImputer(strategy='median')),
         ('scaler', StandardScaler())
@@ -61,43 +45,41 @@ def build_preprocessor(num_cols: list, cat_cols: list) -> ColumnTransformer:
     )
     return preprocessor
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=str, default="data/processed/engineered.csv")
-    parser.add_argument("--output-data", type=str, default="data/processed/final.csv")
-    parser.add_argument("--output-model", type=str, default="src/models/preprocessor.joblib")
-    args = parser.parse_args()
-
-    input_path = os.path.normpath(args.input)
-    output_data_path = os.path.normpath(args.output_data)
-    output_model_path = os.path.normpath(args.output_model)
+# 🚨 NEW: The function Airflow will call
+def run_preprocessing(input_path="data/processed/engineered.csv", 
+                      output_data_path="data/processed/final.csv", 
+                      output_model_path="src/models/preprocessor.joblib"):
+    
+    # When running in Docker, paths need to be absolute relative to /opt/airflow
+    # We prefix with /opt/airflow/ if the path is relative to ensure Docker finds it
+    if not input_path.startswith('/'):
+        input_path = f"/opt/airflow/{input_path}"
+    if not output_data_path.startswith('/'):
+        output_data_path = f"/opt/airflow/{output_data_path}"
+    if not output_model_path.startswith('/'):
+        output_model_path = f"/opt/airflow/{output_model_path}"
 
     if not os.path.exists(input_path):
         log.error(f"File not found: {input_path}")
-        sys.exit(1)
+        raise FileNotFoundError(f"File not found: {input_path}")
 
     df = pd.read_csv(input_path, low_memory=False)
     
-    # ==============================================================================
-    # 1. DYNAMIC LEAKAGE FILTER: Filter out the blacklist AND any hidden inpatient cols
-    # ==============================================================================
     feature_candidates = [
         col for col in df.columns 
         if col not in COLUMNS_TO_IGNORE and "INPATIENT" not in str(col).upper()
     ]
     df_features = df[feature_candidates]
     
-    # 2. DYNAMICALLY READ COLUMNS BY DATA TYPE
     num_cols = df_features.select_dtypes(include=['int64', 'float64']).columns.tolist()
     cat_cols = df_features.select_dtypes(exclude=['int64', 'float64']).columns.tolist()
 
     if len(num_cols) == 0 and len(cat_cols) == 0:
         log.error("CRITICAL: No valid features found!")
-        sys.exit(1)
+        raise ValueError("CRITICAL: No valid features found!")
 
     log.info(f"Auto-detected {len(num_cols)} numeric and {len(cat_cols)} categorical features.")
 
-    # 3. Fit pipeline
     preprocessor = build_preprocessor(num_cols, cat_cols)
     X_processed = preprocessor.fit_transform(df)
     
@@ -111,7 +93,6 @@ if __name__ == "__main__":
         columns=all_feature_names
     )
     
-    # Add target columns back so train.py can use them
     target_cols = [c for c in ["target_is_high_cost", "target_readmission_risk"] if c in df.columns]
     for tc in target_cols:
         df_processed[tc] = df[tc].values
@@ -123,3 +104,14 @@ if __name__ == "__main__":
     joblib.dump(preprocessor, output_model_path)
     
     log.info("Preprocessing complete! Artifact saved.")
+    return "Success"
+
+# Keep this so you can still run it manually from the terminal if you want to!
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", type=str, default="data/processed/engineered.csv")
+    parser.add_argument("--output-data", type=str, default="data/processed/final.csv")
+    parser.add_argument("--output-model", type=str, default="src/models/preprocessor.joblib")
+    args = parser.parse_args()
+    
+    run_preprocessing(args.input, args.output_data, args.output_model)

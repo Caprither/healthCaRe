@@ -1,8 +1,10 @@
 {
     "selected_architecture": "XGBoost",
     "metrics_at_optimal_recall": {
-        "accuracy": 0.5,
-        "recall": 1.0,
-        "f1": 0.6666666666666666
+        "accuracy": 0.8065403291650552,
+        "precision": 0.3892242680350136,
+        "recall": 0.8500329597890574,
+        "f1": 0.5339544513457557,
+        "roc_auc": 0.9190120636704231
     }
 }

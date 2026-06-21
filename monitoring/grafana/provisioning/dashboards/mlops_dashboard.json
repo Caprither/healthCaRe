@@ -1,0 +1,262 @@
+{
+  "uid": "healthcare-mlops-v2",
+  "title": "🏥 Healthcare MLOps — FastAPI + Modèle",
+  "timezone": "browser",
+  "refresh": "15s",
+  "time": { "from": "now-1h", "to": "now" },
+  "schemaVersion": 36,
+  "version": 1,
+  "panels": [
+
+    {
+      "id": 1,
+      "title": "🌐 HTTP Requests — Taux par Endpoint (req/s)",
+      "type": "timeseries",
+      "gridPos": { "x": 0, "y": 0, "w": 16, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "default" },
+      "targets": [
+        {
+          "expr": "sum by (endpoint, status_code) (rate(healthcare_api_requests_total[2m]))",
+          "legendFormat": "{{endpoint}}  [{{status_code}}]",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqps",
+          "custom": { "lineWidth": 2, "fillOpacity": 8 },
+          "color": { "mode": "palette-classic" }
+        }
+      },
+      "options": {
+        "tooltip": { "mode": "multi", "sort": "desc" },
+        "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull", "sum"] }
+      }
+    },
+
+    {
+      "id": 2,
+      "title": "📦 Total Requêtes",
+      "type": "stat",
+      "gridPos": { "x": 16, "y": 0, "w": 4, "h": 4 },
+      "datasource": { "type": "prometheus", "uid": "default" },
+      "targets": [
+        {
+          "expr": "sum(healthcare_api_requests_total)",
+          "legendFormat": "Total",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "color": { "mode": "fixed", "fixedColor": "blue" },
+          "thresholds": { "steps": [{ "color": "blue", "value": null }] }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "graphMode": "area", "textMode": "auto" }
+    },
+
+    {
+      "id": 3,
+      "title": "✅ Succès 200 vs ❌ Erreurs 400",
+      "type": "stat",
+      "gridPos": { "x": 20, "y": 0, "w": 4, "h": 4 },
+      "datasource": { "type": "prometheus", "uid": "default" },
+      "targets": [
+        {
+          "expr": "sum(healthcare_api_requests_total{status_code=\"200\"})",
+          "legendFormat": "200 OK",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(healthcare_api_requests_total{status_code=\"400\"})",
+          "legendFormat": "400 Erreur",
+          "refId": "B"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "thresholds": { "steps": [{ "color": "green", "value": null }] }
+        },
+        "overrides": [
+          {
+            "matcher": { "id": "byName", "options": "400 Erreur" },
+            "properties": [
+              { "id": "color", "value": { "mode": "fixed", "fixedColor": "red" } }
+            ]
+          }
+        ]
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "graphMode": "none", "textMode": "auto" }
+    },
+
+    {
+      "id": 4,
+      "title": "🎯 F1 Score",
+      "type": "gauge",
+      "gridPos": { "x": 16, "y": 4, "w": 4, "h": 4 },
+      "datasource": { "type": "prometheus", "uid": "default" },
+      "targets": [
+        {
+          "expr": "model_f1_score",
+          "legendFormat": "F1 Score",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "min": 0, "max": 1,
+          "unit": "percentunit",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "red",    "value": null },
+              { "color": "orange", "value": 0.6  },
+              { "color": "green",  "value": 0.75 }
+            ]
+          }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "showThresholdLabels": true, "showThresholdMarkers": true }
+    },
+
+    {
+      "id": 5,
+      "title": "📈 Recall",
+      "type": "gauge",
+      "gridPos": { "x": 20, "y": 4, "w": 4, "h": 4 },
+      "datasource": { "type": "prometheus", "uid": "default" },
+      "targets": [
+        {
+          "expr": "model_recall_score",
+          "legendFormat": "Recall",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "min": 0, "max": 1,
+          "unit": "percentunit",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "red",    "value": null },
+              { "color": "orange", "value": 0.6  },
+              { "color": "green",  "value": 0.75 }
+            ]
+          }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "showThresholdLabels": true, "showThresholdMarkers": true }
+    },
+
+    {
+      "id": 6,
+      "title": "📉 F1 Score & Recall — Historique",
+      "type": "timeseries",
+      "gridPos": { "x": 0, "y": 8, "w": 24, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "default" },
+      "targets": [
+        {
+          "expr": "model_f1_score",
+          "legendFormat": "F1 Score",
+          "refId": "A"
+        },
+        {
+          "expr": "model_recall_score",
+          "legendFormat": "Recall",
+          "refId": "B"
+        },
+        {
+          "expr": "model_precision_score",
+          "legendFormat": "Precision",
+          "refId": "C"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "min": 0, "max": 1,
+          "unit": "percentunit",
+          "custom": { "lineWidth": 2, "fillOpacity": 10 },
+          "color": { "mode": "palette-classic" },
+          "thresholds": {
+            "steps": [
+              { "color": "red",   "value": null },
+              { "color": "green", "value": 0.7  }
+            ]
+          }
+        }
+      },
+      "options": {
+        "tooltip": { "mode": "multi" },
+        "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull", "min", "max"] },
+        "thresholdsStyle": { "mode": "line" }
+      }
+    },
+
+    {
+      "id": 7,
+      "title": "⏱️ Latence API — p50 / p95 / p99",
+      "type": "timeseries",
+      "gridPos": { "x": 0, "y": 16, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "default" },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.50, sum by (le, endpoint) (rate(healthcare_api_request_latency_seconds_bucket[5m])))",
+          "legendFormat": "p50 — {{endpoint}}",
+          "refId": "A"
+        },
+        {
+          "expr": "histogram_quantile(0.95, sum by (le, endpoint) (rate(healthcare_api_request_latency_seconds_bucket[5m])))",
+          "legendFormat": "p95 — {{endpoint}}",
+          "refId": "B"
+        },
+        {
+          "expr": "histogram_quantile(0.99, sum by (le, endpoint) (rate(healthcare_api_request_latency_seconds_bucket[5m])))",
+          "legendFormat": "p99 — {{endpoint}}",
+          "refId": "C"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "custom": { "lineWidth": 2, "fillOpacity": 5 },
+          "color": { "mode": "palette-classic" }
+        }
+      },
+      "options": {
+        "tooltip": { "mode": "multi" },
+        "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull"] }
+      }
+    },
+
+    {
+      "id": 8,
+      "title": "🏥 Prédictions — Haut Risque vs Faible Risque",
+      "type": "timeseries",
+      "gridPos": { "x": 12, "y": 16, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "default" },
+      "targets": [
+        {
+          "expr": "sum by (readmission_predite) (rate(healthcare_model_predictions_total[5m]))",
+          "legendFormat": "Réadmission: {{readmission_predite}}",
+          "refId": "A"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "reqps",
+          "custom": { "lineWidth": 2, "fillOpacity": 15 },
+          "color": { "mode": "palette-classic" }
+        }
+      },
+      "options": {
+        "tooltip": { "mode": "multi" },
+        "legend": { "displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull"] }
+      }
+    }
+
+  ]
+}

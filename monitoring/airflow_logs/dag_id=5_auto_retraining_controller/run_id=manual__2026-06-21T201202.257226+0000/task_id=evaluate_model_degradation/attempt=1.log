@@ -1,0 +1,21 @@
+[2026-06-21T20:12:05.043+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-21T20:12:05.251+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 5_auto_retraining_controller.evaluate_model_degradation manual__2026-06-21T20:12:02.257226+00:00 [queued]>
+[2026-06-21T20:12:05.269+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 5_auto_retraining_controller.evaluate_model_degradation manual__2026-06-21T20:12:02.257226+00:00 [queued]>
+[2026-06-21T20:12:05.270+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-06-21T20:12:05.318+0000] {taskinstance.py:2330} INFO - Executing <Task(BranchPythonOperator): evaluate_model_degradation> on 2026-06-21 20:12:02.257226+00:00
+[2026-06-21T20:12:05.344+0000] {standard_task_runner.py:64} INFO - Started process 552 to run task
+[2026-06-21T20:12:05.383+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', '5_auto_retraining_controller', 'evaluate_model_degradation', 'manual__2026-06-21T20:12:02.257226+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/auto_retrain_dag.py', '--cfg-path', '/tmp/tmpry07jrv_']
+[2026-06-21T20:12:05.408+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask evaluate_model_degradation
+[2026-06-21T20:12:05.798+0000] {task_command.py:426} INFO - Running <TaskInstance: 5_auto_retraining_controller.evaluate_model_degradation manual__2026-06-21T20:12:02.257226+00:00 [running]> on host 224ce12117fd
+[2026-06-21T20:12:06.001+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='5_auto_retraining_controller' AIRFLOW_CTX_TASK_ID='evaluate_model_degradation' AIRFLOW_CTX_EXECUTION_DATE='2026-06-21T20:12:02.257226+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-21T20:12:02.257226+00:00'
+[2026-06-21T20:12:06.004+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-21T20:12:06.402+0000] {baseoperator.py:400} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2026-06-21T20:12:06.404+0000] {python.py:237} INFO - Done. Returned value was: trigger_retraining_pipeline
+[2026-06-21T20:12:06.405+0000] {branch.py:36} INFO - Branch into trigger_retraining_pipeline
+[2026-06-21T20:12:06.407+0000] {skipmixin.py:178} INFO - Following branch trigger_retraining_pipeline
+[2026-06-21T20:12:06.456+0000] {skipmixin.py:246} INFO - Skipping tasks [('model_is_healthy', -1)]
+[2026-06-21T20:12:06.491+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-21T20:12:06.523+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=5_auto_retraining_controller, task_id=evaluate_model_degradation, run_id=manual__2026-06-21T20:12:02.257226+00:00, execution_date=20260621T201202, start_date=20260621T201205, end_date=20260621T201206
+[2026-06-21T20:12:06.560+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-06-21T20:12:06.592+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-21T20:12:06.596+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

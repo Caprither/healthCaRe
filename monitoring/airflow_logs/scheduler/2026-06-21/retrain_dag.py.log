@@ -1,0 +1,165 @@
+[2026-06-21T20:03:07.602+0000] {processor.py:161} INFO - Started process (PID=191) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:03:07.604+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:03:07.607+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:07.606+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:03:07.638+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:03:07.791+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:07.790+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:4_retrain_model
+[2026-06-21T20:03:07.809+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:07.809+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:4_retrain_model
+[2026-06-21T20:03:07.826+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:07.825+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:4_retrain_model
+[2026-06-21T20:03:07.828+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:07.828+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:03:07.855+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:07.855+0000] {dag.py:3111} INFO - Creating ORM DAG for 4_retrain_model
+[2026-06-21T20:03:07.857+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:07.857+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:03:07.880+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.285 seconds
+[2026-06-21T20:03:38.048+0000] {processor.py:161} INFO - Started process (PID=211) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:03:38.049+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:03:38.053+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:38.052+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:03:38.080+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:03:38.114+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:38.114+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:03:38.131+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:38.130+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:03:38.163+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.123 seconds
+[2026-06-21T20:04:08.380+0000] {processor.py:161} INFO - Started process (PID=237) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:04:08.384+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:04:08.388+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:08.387+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:04:08.437+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:04:08.474+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:08.474+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:04:08.492+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:08.492+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:04:08.535+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.191 seconds
+[2026-06-21T20:04:39.428+0000] {processor.py:161} INFO - Started process (PID=261) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:04:39.439+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:04:39.446+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:39.445+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:04:39.491+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:04:39.526+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:39.526+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:04:39.541+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:39.541+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:04:39.570+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.152 seconds
+[2026-06-21T20:05:10.121+0000] {processor.py:161} INFO - Started process (PID=289) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:05:10.122+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:05:10.125+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:10.124+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:05:10.148+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:05:10.174+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:10.174+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:05:10.190+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:10.190+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:05:10.225+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.112 seconds
+[2026-06-21T20:05:41.295+0000] {processor.py:161} INFO - Started process (PID=315) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:05:41.297+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:05:41.301+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:41.300+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:05:41.324+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:05:41.355+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:41.355+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:05:41.374+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:41.374+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:05:41.401+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.114 seconds
+[2026-06-21T20:06:11.980+0000] {processor.py:161} INFO - Started process (PID=341) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:06:11.982+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:06:11.984+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:11.984+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:06:12.020+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:06:12.064+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:12.063+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:06:12.088+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:12.087+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:06:12.128+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.157 seconds
+[2026-06-21T20:06:42.464+0000] {processor.py:161} INFO - Started process (PID=357) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:06:42.466+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:06:42.468+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:42.468+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:06:42.494+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:06:42.523+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:42.523+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:06:42.539+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:42.539+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:06:42.567+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.110 seconds
+[2026-06-21T20:07:12.905+0000] {processor.py:161} INFO - Started process (PID=373) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:07:12.907+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:07:12.908+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:12.908+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:07:12.935+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:07:12.968+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:12.967+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:07:12.982+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:12.982+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:07:13.014+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.118 seconds
+[2026-06-21T20:07:43.331+0000] {processor.py:161} INFO - Started process (PID=389) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:07:43.332+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:07:43.334+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:43.334+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:07:43.376+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:07:43.426+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:43.426+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:07:43.443+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:43.443+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:07:43.481+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.159 seconds
+[2026-06-21T20:08:13.973+0000] {processor.py:161} INFO - Started process (PID=410) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:08:13.975+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:08:13.977+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:13.976+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:08:14.023+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:08:14.074+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:14.074+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:08:14.100+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:14.099+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:08:14.142+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.186 seconds
+[2026-06-21T20:08:44.495+0000] {processor.py:161} INFO - Started process (PID=437) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:08:44.497+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:08:44.499+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:44.499+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:08:44.528+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:08:44.556+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:44.555+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:08:44.569+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:44.569+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:08:44.593+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.105 seconds
+[2026-06-21T20:09:14.938+0000] {processor.py:161} INFO - Started process (PID=453) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:09:14.941+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:09:14.948+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:14.946+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:09:14.976+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:09:15.007+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:15.006+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:09:15.020+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:15.020+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:09:15.048+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.120 seconds
+[2026-06-21T20:09:45.357+0000] {processor.py:161} INFO - Started process (PID=469) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:09:45.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:09:45.360+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:45.360+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:09:45.384+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:09:45.418+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:45.418+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:09:45.434+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:45.434+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:09:45.461+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.113 seconds
+[2026-06-21T20:10:15.827+0000] {processor.py:161} INFO - Started process (PID=485) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:10:15.830+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:10:15.833+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:15.832+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:10:15.876+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:10:15.925+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:15.924+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:10:15.946+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:15.945+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:10:15.985+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.167 seconds
+[2026-06-21T20:10:46.472+0000] {processor.py:161} INFO - Started process (PID=501) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:10:46.476+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:10:46.481+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:46.479+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:10:46.588+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:10:46.662+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:46.661+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:10:46.688+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:46.687+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:10:46.748+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.314 seconds
+[2026-06-21T20:11:17.117+0000] {processor.py:161} INFO - Started process (PID=517) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:11:17.119+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:11:17.121+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:17.120+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:11:17.152+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:11:17.184+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:17.184+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:11:17.200+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:17.199+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:11:17.227+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.120 seconds
+[2026-06-21T20:11:47.429+0000] {processor.py:161} INFO - Started process (PID=533) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:11:47.431+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:11:47.433+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:47.432+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:11:47.467+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:11:47.498+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:47.498+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:11:47.518+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:47.517+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:11:47.545+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.126 seconds
+[2026-06-21T20:12:17.960+0000] {processor.py:161} INFO - Started process (PID=562) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:12:17.962+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:12:17.965+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:17.963+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:12:17.999+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:12:18.044+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:18.044+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:12:18.068+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:18.068+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:12:18.103+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.151 seconds
+[2026-06-21T20:12:48.432+0000] {processor.py:161} INFO - Started process (PID=578) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:12:48.434+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:12:48.435+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:48.435+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:12:48.458+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:12:48.489+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:48.488+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:12:48.507+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:48.507+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:12:48.533+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.118 seconds
+[2026-06-21T20:13:18.974+0000] {processor.py:161} INFO - Started process (PID=594) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:13:18.978+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:13:18.981+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:13:18.981+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:13:19.040+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:13:19.097+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:13:19.097+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:13:19.121+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:13:19.120+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:13:19.157+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.201 seconds
+[2026-06-21T20:13:49.482+0000] {processor.py:161} INFO - Started process (PID=610) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:13:49.484+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:13:49.487+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:13:49.487+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:13:49.515+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:13:49.545+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:13:49.545+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:13:49.561+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:13:49.560+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:13:49.589+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.118 seconds
+[2026-06-21T20:14:19.940+0000] {processor.py:161} INFO - Started process (PID=626) to work on /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:14:19.942+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_dag.py for tasks to queue
+[2026-06-21T20:14:19.943+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:14:19.943+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:14:19.964+0000] {processor.py:840} INFO - DAG(s) '4_retrain_model' retrieved from /opt/airflow/dags/retrain_dag.py
+[2026-06-21T20:14:19.993+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:14:19.992+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:14:20.009+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:14:20.009+0000] {dag.py:3947} INFO - Setting next_dagrun for 4_retrain_model to None, run_after=None
+[2026-06-21T20:14:20.035+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_dag.py took 0.102 seconds

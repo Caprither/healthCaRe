@@ -1,0 +1,171 @@
+x-airflow-common:
+  &airflow-common
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
+  image: mlops-airflow:latest
+  environment:
+    &airflow-common-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+    AIRFLOW__API__AUTH_BACKENDS: "airflow.api.auth.backend.basic_auth"
+    PYTHONPATH: /opt/airflow
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./src:/opt/airflow/src
+    - ./data:/opt/airflow/data
+    - ./output:/opt/airflow/output
+    - ./airflow_logs:/opt/airflow/logs
+    - ./airflow_plugins:/opt/airflow/plugins
+  user: "${AIRFLOW_UID:-50000}:0"
+  # Lets DAGs (inference_dag.py) reach FastAPI running on the host
+  extra_hosts:
+    - "host.docker.internal:host-gateway"
+  depends_on:
+    airflow-postgres:
+      condition: service_healthy
+  networks:
+    - mlops_net
+
+services:
+
+  # ── PROMETHEUS → http://localhost:9090 ──────────────
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: mlops_prometheus
+    restart: always
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+    # Allows containers to reach host machine (where FastAPI runs)
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - mlops_net
+
+  # ── PUSHGATEWAY → http://localhost:9091 ─────────────
+  pushgateway:
+    image: prom/pushgateway:latest
+    container_name: mlops_pushgateway
+    restart: always
+    ports:
+      - "9091:9091"
+    networks:
+      - mlops_net
+
+  # ── METRICS SCHEDULER → pushes fresh F1/Recall/Precision periodically ──
+  metrics-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile.metrics
+    container_name: mlops_metrics_scheduler
+    restart: always
+    environment:
+      PUSHGATEWAY_URL: http://pushgateway:9091
+      PUSH_INTERVAL_SECONDS: "300"   # push a fresh sampled metric every 5 minutes
+      SAMPLE_FRACTION: "0.75"        # evaluate on 75% of test rows each run
+    volumes:
+      - ./output:/app/output:ro
+      - ./data:/app/data:ro
+    depends_on:
+      - pushgateway
+    networks:
+      - mlops_net
+
+  # ── GRAFANA → http://localhost:3000  admin/admin ────
+  grafana:
+    image: grafana/grafana:latest
+    container_name: mlops_grafana
+    restart: always
+    depends_on:
+      - prometheus
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+    ports:
+      - "3000:3000"
+    networks:
+      - mlops_net
+
+  # ── AIRFLOW METADATA DB ──────────────────────────────
+  airflow-postgres:
+    image: postgres:15
+    container_name: mlops_airflow_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - airflow_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+    networks:
+      - mlops_net
+
+  # ── AIRFLOW INIT → creates DB schema + admin user, then exits ──
+  airflow-init:
+    <<: *airflow-common
+    container_name: mlops_airflow_init
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create \
+          --username admin \
+          --password admin \
+          --firstname Admin \
+          --lastname User \
+          --role Admin \
+          --email admin@example.com || true
+    restart: "no"
+
+  # ── AIRFLOW WEBSERVER → http://localhost:8081  admin/admin ──
+  airflow-webserver:
+    <<: *airflow-common
+    container_name: mlops_airflow_webserver
+    command: webserver
+    ports:
+      - "8081:8080"
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: always
+
+  # ── AIRFLOW SCHEDULER → runs the 5 DAGs on their schedules ──
+  airflow-scheduler:
+    <<: *airflow-common
+    container_name: mlops_airflow_scheduler
+    command: scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    restart: always
+
+volumes:
+  prometheus_data:
+  grafana_data:
+  airflow_postgres_data:
+
+networks:
+  mlops_net:
+    driver: bridge

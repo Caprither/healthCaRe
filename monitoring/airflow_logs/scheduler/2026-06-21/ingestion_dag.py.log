@@ -1,0 +1,98 @@
+[2026-06-21T20:03:06.776+0000] {processor.py:161} INFO - Started process (PID=181) to work on /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:03:06.778+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingestion_dag.py for tasks to queue
+[2026-06-21T20:03:06.781+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:06.781+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:03:06.819+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:06.815+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/ingestion_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_dag.py", line 12, in <module>
+    from src.data_preprocessing import run_preprocessing
+ModuleNotFoundError: No module named 'src.data_preprocessing'
+[2026-06-21T20:03:06.822+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:03:06.868+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingestion_dag.py took 0.126 seconds
+[2026-06-21T20:03:37.001+0000] {processor.py:161} INFO - Started process (PID=203) to work on /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:03:37.003+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingestion_dag.py for tasks to queue
+[2026-06-21T20:03:37.009+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:37.008+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:03:37.035+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:37.031+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/ingestion_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_dag.py", line 12, in <module>
+    from src.data_preprocessing import run_preprocessing
+ModuleNotFoundError: No module named 'src.data_preprocessing'
+[2026-06-21T20:03:37.036+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:03:37.071+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingestion_dag.py took 0.076 seconds
+[2026-06-21T20:04:07.143+0000] {processor.py:161} INFO - Started process (PID=229) to work on /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:04:07.144+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingestion_dag.py for tasks to queue
+[2026-06-21T20:04:07.148+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:07.147+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:04:07.171+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:07.167+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/ingestion_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_dag.py", line 12, in <module>
+    from src.data_preprocessing import run_preprocessing
+ModuleNotFoundError: No module named 'src.data_preprocessing'
+[2026-06-21T20:04:07.173+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:04:07.199+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingestion_dag.py took 0.063 seconds
+[2026-06-21T20:04:37.363+0000] {processor.py:161} INFO - Started process (PID=253) to work on /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:04:37.366+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingestion_dag.py for tasks to queue
+[2026-06-21T20:04:37.369+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:37.368+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:04:37.400+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:37.395+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/ingestion_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_dag.py", line 12, in <module>
+    from src.data_preprocessing import run_preprocessing
+ModuleNotFoundError: No module named 'src.data_preprocessing'
+[2026-06-21T20:04:37.402+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:04:37.432+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingestion_dag.py took 0.078 seconds
+[2026-06-21T20:05:07.966+0000] {processor.py:161} INFO - Started process (PID=279) to work on /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:05:07.968+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingestion_dag.py for tasks to queue
+[2026-06-21T20:05:07.970+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:07.970+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:05:07.995+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:07.991+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/ingestion_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_dag.py", line 12, in <module>
+    from src.data_preprocessing import run_preprocessing
+ModuleNotFoundError: No module named 'src.data_preprocessing'
+[2026-06-21T20:05:07.997+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:05:08.029+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingestion_dag.py took 0.069 seconds
+[2026-06-21T20:05:38.141+0000] {processor.py:161} INFO - Started process (PID=305) to work on /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:05:38.143+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingestion_dag.py for tasks to queue
+[2026-06-21T20:05:38.145+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:38.145+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:05:38.170+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:38.166+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/ingestion_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_dag.py", line 12, in <module>
+    from src.data_preprocessing import run_preprocessing
+ModuleNotFoundError: No module named 'src.data_preprocessing'
+[2026-06-21T20:05:38.172+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:05:38.206+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingestion_dag.py took 0.071 seconds
+[2026-06-21T20:06:08.795+0000] {processor.py:161} INFO - Started process (PID=331) to work on /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:06:08.797+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ingestion_dag.py for tasks to queue
+[2026-06-21T20:06:08.800+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:08.800+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:06:08.827+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:08.821+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/ingestion_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/ingestion_dag.py", line 12, in <module>
+    from src.data_preprocessing import run_preprocessing
+ModuleNotFoundError: No module named 'src.data_preprocessing'
+[2026-06-21T20:06:08.830+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/ingestion_dag.py
+[2026-06-21T20:06:08.857+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ingestion_dag.py took 0.069 seconds

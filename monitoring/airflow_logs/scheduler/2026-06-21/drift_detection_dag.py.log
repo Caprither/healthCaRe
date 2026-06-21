@@ -1,0 +1,98 @@
+[2026-06-21T20:03:06.510+0000] {processor.py:161} INFO - Started process (PID=175) to work on /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:03:06.517+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-06-21T20:03:06.531+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:06.529+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:03:06.583+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:06.575+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/drift_detection_dag.py", line 13, in <module>
+    from src.evidently_monitor import run_evidently_and_push
+ModuleNotFoundError: No module named 'src.evidently_monitor'
+[2026-06-21T20:03:06.586+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:03:06.673+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/drift_detection_dag.py took 0.200 seconds
+[2026-06-21T20:03:36.870+0000] {processor.py:161} INFO - Started process (PID=198) to work on /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:03:36.872+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-06-21T20:03:36.876+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:36.876+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:03:36.900+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:36.896+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/drift_detection_dag.py", line 13, in <module>
+    from src.evidently_monitor import run_evidently_and_push
+ModuleNotFoundError: No module named 'src.evidently_monitor'
+[2026-06-21T20:03:36.902+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:03:36.941+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/drift_detection_dag.py took 0.077 seconds
+[2026-06-21T20:04:07.019+0000] {processor.py:161} INFO - Started process (PID=224) to work on /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:04:07.020+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-06-21T20:04:07.023+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:07.022+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:04:07.048+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:07.044+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/drift_detection_dag.py", line 13, in <module>
+    from src.evidently_monitor import run_evidently_and_push
+ModuleNotFoundError: No module named 'src.evidently_monitor'
+[2026-06-21T20:04:07.050+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:04:07.079+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/drift_detection_dag.py took 0.080 seconds
+[2026-06-21T20:04:37.341+0000] {processor.py:161} INFO - Started process (PID=250) to work on /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:04:37.343+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-06-21T20:04:37.346+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:37.346+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:04:37.385+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:37.379+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/drift_detection_dag.py", line 13, in <module>
+    from src.evidently_monitor import run_evidently_and_push
+ModuleNotFoundError: No module named 'src.evidently_monitor'
+[2026-06-21T20:04:37.388+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:04:37.433+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/drift_detection_dag.py took 0.101 seconds
+[2026-06-21T20:05:07.952+0000] {processor.py:161} INFO - Started process (PID=276) to work on /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:05:07.955+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-06-21T20:05:07.958+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:07.957+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:05:07.985+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:07.981+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/drift_detection_dag.py", line 13, in <module>
+    from src.evidently_monitor import run_evidently_and_push
+ModuleNotFoundError: No module named 'src.evidently_monitor'
+[2026-06-21T20:05:07.987+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:05:08.014+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/drift_detection_dag.py took 0.071 seconds
+[2026-06-21T20:05:38.124+0000] {processor.py:161} INFO - Started process (PID=302) to work on /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:05:38.126+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-06-21T20:05:38.129+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:38.128+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:05:38.155+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:38.151+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/drift_detection_dag.py", line 13, in <module>
+    from src.evidently_monitor import run_evidently_and_push
+ModuleNotFoundError: No module named 'src.evidently_monitor'
+[2026-06-21T20:05:38.157+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:05:38.184+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/drift_detection_dag.py took 0.067 seconds
+[2026-06-21T20:06:08.771+0000] {processor.py:161} INFO - Started process (PID=328) to work on /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:06:08.773+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/drift_detection_dag.py for tasks to queue
+[2026-06-21T20:06:08.775+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:08.775+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:06:08.803+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:08.799+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/drift_detection_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/drift_detection_dag.py", line 13, in <module>
+    from src.evidently_monitor import run_evidently_and_push
+ModuleNotFoundError: No module named 'src.evidently_monitor'
+[2026-06-21T20:06:08.805+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/drift_detection_dag.py
+[2026-06-21T20:06:08.838+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/drift_detection_dag.py took 0.074 seconds

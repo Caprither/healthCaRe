@@ -1,0 +1,14 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir \
+    requests \
+    pandas \
+    numpy \
+    scikit-learn \
+    joblib
+
+COPY push_metrics.py .
+
+CMD ["python", "push_metrics.py"]

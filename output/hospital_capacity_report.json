@@ -1,0 +1,41 @@
+{
+    "simulation_parameters": {
+        "total_test_patients": 23271,
+        "number_of_hospitals": 5,
+        "threshold_type_used": "optimal_recall",
+        "recall_threshold_value": 0.08687755465507507,
+        "random_seed": 42
+    },
+    "hospital_capacity_report": {
+        "Hôpital A": {
+            "total_patients_received": 4692,
+            "predicted_readmissions": 1325,
+            "estimated_readmission_rate": 0.2824,
+            "preventive_beds_to_reserve": 1325
+        },
+        "Hôpital B": {
+            "total_patients_received": 4673,
+            "predicted_readmissions": 1405,
+            "estimated_readmission_rate": 0.3007,
+            "preventive_beds_to_reserve": 1405
+        },
+        "Hôpital C": {
+            "total_patients_received": 4692,
+            "predicted_readmissions": 1303,
+            "estimated_readmission_rate": 0.2777,
+            "preventive_beds_to_reserve": 1303
+        },
+        "Hôpital D": {
+            "total_patients_received": 4688,
+            "predicted_readmissions": 1312,
+            "estimated_readmission_rate": 0.2799,
+            "preventive_beds_to_reserve": 1312
+        },
+        "Hôpital E": {
+            "total_patients_received": 4526,
+            "predicted_readmissions": 1281,
+            "estimated_readmission_rate": 0.283,
+            "preventive_beds_to_reserve": 1281
+        }
+    }
+}

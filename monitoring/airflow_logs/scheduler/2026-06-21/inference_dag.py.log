@@ -1,0 +1,158 @@
+[2026-06-21T20:03:06.474+0000] {processor.py:161} INFO - Started process (PID=172) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:03:06.476+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:03:06.481+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:06.480+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:03:08.126+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:03:08.419+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:08.418+0000] {override.py:1858} INFO - Created Permission View: can delete on DAG:2_batch_inference
+[2026-06-21T20:03:08.433+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:08.433+0000] {override.py:1858} INFO - Created Permission View: can edit on DAG:2_batch_inference
+[2026-06-21T20:03:08.442+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:08.441+0000] {override.py:1858} INFO - Created Permission View: can read on DAG:2_batch_inference
+[2026-06-21T20:03:08.444+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:08.443+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:03:08.478+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:08.477+0000] {dag.py:3111} INFO - Creating ORM DAG for 2_batch_inference
+[2026-06-21T20:03:08.483+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:08.482+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:03:08.521+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 2.063 seconds
+[2026-06-21T20:03:39.249+0000] {processor.py:161} INFO - Started process (PID=218) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:03:39.251+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:03:39.253+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:39.253+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:03:39.564+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:03:39.605+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:39.605+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:03:39.636+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:03:39.635+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:03:39.690+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.447 seconds
+[2026-06-21T20:04:10.388+0000] {processor.py:161} INFO - Started process (PID=244) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:04:10.391+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:04:10.395+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:10.394+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:04:10.889+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:04:10.942+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:10.942+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:04:10.985+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:10.985+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:04:11.023+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.643 seconds
+[2026-06-21T20:04:41.664+0000] {processor.py:161} INFO - Started process (PID=270) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:04:41.676+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:04:41.694+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:41.694+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:04:42.035+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:04:42.063+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:42.063+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:04:42.080+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:04:42.080+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:04:42.103+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.445 seconds
+[2026-06-21T20:05:12.307+0000] {processor.py:161} INFO - Started process (PID=296) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:05:12.309+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:05:12.311+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:12.311+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:05:12.723+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:05:12.761+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:12.761+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:05:12.793+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:12.793+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:05:12.826+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.527 seconds
+[2026-06-21T20:05:43.487+0000] {processor.py:161} INFO - Started process (PID=322) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:05:43.489+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:05:43.491+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:43.491+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:05:43.831+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:05:43.864+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:43.863+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:05:43.881+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:05:43.881+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:05:43.906+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.426 seconds
+[2026-06-21T20:06:14.071+0000] {processor.py:161} INFO - Started process (PID=348) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:06:14.073+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:06:14.075+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:14.075+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:06:14.533+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:06:14.578+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:14.578+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:06:14.633+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:14.633+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:06:14.765+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.703 seconds
+[2026-06-21T20:06:45.506+0000] {processor.py:161} INFO - Started process (PID=364) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:06:45.508+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:06:45.510+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:45.510+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:06:45.876+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:06:45.924+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:45.923+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:06:45.960+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:06:45.959+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:06:46.004+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.505 seconds
+[2026-06-21T20:07:16.096+0000] {processor.py:161} INFO - Started process (PID=380) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:07:16.098+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:07:16.100+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:16.099+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:07:16.466+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:07:16.493+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:16.492+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:07:16.505+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:16.505+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:07:16.534+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.444 seconds
+[2026-06-21T20:07:47.379+0000] {processor.py:161} INFO - Started process (PID=396) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:07:47.381+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:07:47.383+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:47.382+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:07:47.692+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:07:47.724+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:47.724+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:07:47.741+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:07:47.741+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:07:47.765+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.393 seconds
+[2026-06-21T20:08:18.259+0000] {processor.py:161} INFO - Started process (PID=422) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:08:18.261+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:08:18.263+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:18.262+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:08:18.794+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:08:18.828+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:18.827+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:08:18.844+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:18.844+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:08:18.873+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.621 seconds
+[2026-06-21T20:08:49.693+0000] {processor.py:161} INFO - Started process (PID=444) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:08:49.696+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:08:49.699+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:49.698+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:08:50.050+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:08:50.075+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:50.075+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:08:50.089+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:08:50.089+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:08:50.114+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.427 seconds
+[2026-06-21T20:09:20.997+0000] {processor.py:161} INFO - Started process (PID=460) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:09:20.998+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:09:21.000+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:21.000+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:09:21.340+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:09:21.382+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:21.381+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:09:21.402+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:21.401+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:09:21.440+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.451 seconds
+[2026-06-21T20:09:51.570+0000] {processor.py:161} INFO - Started process (PID=476) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:09:51.572+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:09:51.574+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:51.573+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:09:51.875+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:09:51.901+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:51.901+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:09:51.914+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:09:51.914+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:09:51.939+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.378 seconds
+[2026-06-21T20:10:22.109+0000] {processor.py:161} INFO - Started process (PID=492) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:10:22.110+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:10:22.112+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:22.112+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:10:22.426+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:10:22.454+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:22.454+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:10:22.469+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:22.469+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:10:22.492+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.390 seconds
+[2026-06-21T20:10:52.866+0000] {processor.py:161} INFO - Started process (PID=508) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:10:52.868+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:10:52.870+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:52.869+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:10:53.268+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:10:53.296+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:53.295+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:10:53.310+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:10:53.310+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:10:53.337+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.478 seconds
+[2026-06-21T20:11:24.186+0000] {processor.py:161} INFO - Started process (PID=524) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:11:24.189+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:11:24.191+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:24.191+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:11:24.943+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:11:25.044+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:25.043+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:11:25.128+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:25.127+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:11:25.207+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 1.027 seconds
+[2026-06-21T20:11:55.685+0000] {processor.py:161} INFO - Started process (PID=540) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:11:55.686+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:11:55.688+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:55.687+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:11:56.447+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:11:56.571+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:56.570+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:11:56.658+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:11:56.657+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:11:56.785+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 1.108 seconds
+[2026-06-21T20:12:27.170+0000] {processor.py:161} INFO - Started process (PID=569) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:12:27.172+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:12:27.173+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:27.173+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:12:27.597+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:12:27.625+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:27.625+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:12:27.639+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:27.638+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:12:27.664+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.501 seconds
+[2026-06-21T20:12:58.684+0000] {processor.py:161} INFO - Started process (PID=585) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:12:58.686+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:12:58.687+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:58.687+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:12:59.105+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:12:59.131+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:59.131+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:12:59.145+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:12:59.145+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:12:59.170+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.496 seconds
+[2026-06-21T20:13:29.303+0000] {processor.py:161} INFO - Started process (PID=601) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:13:29.305+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:13:29.307+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:13:29.307+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:13:29.703+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:13:29.747+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:13:29.747+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:13:29.768+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:13:29.768+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:13:29.801+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.506 seconds
+[2026-06-21T20:14:00.597+0000] {processor.py:161} INFO - Started process (PID=617) to work on /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:14:00.600+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/inference_dag.py for tasks to queue
+[2026-06-21T20:14:00.602+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:14:00.601+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:14:00.986+0000] {processor.py:840} INFO - DAG(s) '2_batch_inference' retrieved from /opt/airflow/dags/inference_dag.py
+[2026-06-21T20:14:01.045+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:14:01.044+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-06-21T20:14:01.068+0000] {logging_mixin.py:188} INFO - [2026-06-21T20:14:01.068+0000] {dag.py:3947} INFO - Setting next_dagrun for 2_batch_inference to None, run_after=None
+[2026-06-21T20:14:01.103+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/inference_dag.py took 0.514 seconds

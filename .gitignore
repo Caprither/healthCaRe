@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Airflow
+logs/
+airflow-webserver.pid
+
+# MLflow
+mlruns/
+
+# DVC cache
+.dvc/cache/
+.dvc/tmp/
+
+# Database volumes
+postgres_data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

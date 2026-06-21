@@ -3,6 +3,11 @@ numpy
 scikit-learn
 xgboost
 lightgbm
-mlflow
 joblib
+mlflow
+fastapi
+uvicorn
+pydantic
+prometheus-client
 pytest
+evidently

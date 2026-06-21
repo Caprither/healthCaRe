@@ -1,0 +1,36 @@
+[2026-06-21T20:12:09.757+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-06-21T20:12:09.804+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 4_retrain_model.execute_train_script manual__2026-06-21T20:12:08.613506+00:00 [queued]>
+[2026-06-21T20:12:09.819+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 4_retrain_model.execute_train_script manual__2026-06-21T20:12:08.613506+00:00 [queued]>
+[2026-06-21T20:12:09.820+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-06-21T20:12:09.837+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): execute_train_script> on 2026-06-21 20:12:08.613506+00:00
+[2026-06-21T20:12:09.848+0000] {standard_task_runner.py:64} INFO - Started process 557 to run task
+[2026-06-21T20:12:09.851+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', '4_retrain_model', 'execute_train_script', 'manual__2026-06-21T20:12:08.613506+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/retrain_dag.py', '--cfg-path', '/tmp/tmp75w2474i']
+[2026-06-21T20:12:09.855+0000] {standard_task_runner.py:91} INFO - Job 12: Subtask execute_train_script
+[2026-06-21T20:12:09.950+0000] {task_command.py:426} INFO - Running <TaskInstance: 4_retrain_model.execute_train_script manual__2026-06-21T20:12:08.613506+00:00 [running]> on host 224ce12117fd
+[2026-06-21T20:12:10.079+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='mlops_engineer' AIRFLOW_CTX_DAG_ID='4_retrain_model' AIRFLOW_CTX_TASK_ID='execute_train_script' AIRFLOW_CTX_EXECUTION_DATE='2026-06-21T20:12:08.613506+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-21T20:12:08.613506+00:00'
+[2026-06-21T20:12:10.081+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-06-21T20:12:10.097+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-06-21T20:12:10.099+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/src/models/train.py']
+[2026-06-21T20:12:10.121+0000] {subprocess.py:86} INFO - Output:
+[2026-06-21T20:12:10.238+0000] {subprocess.py:93} INFO - python: can't open file '/opt/***/src/models/train.py': [Errno 2] No such file or directory
+[2026-06-21T20:12:10.258+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-06-21T20:12:10.261+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-06-21T20:12:10.302+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-06-21T20:12:10.315+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=4_retrain_model, task_id=execute_train_script, run_id=manual__2026-06-21T20:12:08.613506+00:00, execution_date=20260621T201208, start_date=20260621T201209, end_date=20260621T201210
+[2026-06-21T20:12:10.648+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 12 for task execute_train_script (Bash command failed. The command returned a non-zero exit code 2.; 557)
+[2026-06-21T20:12:10.709+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-06-21T20:12:10.741+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-06-21T20:12:10.744+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
